@@ -1,0 +1,15 @@
+[rust]
+edition = "2021"
+
+[book]
+authors = ["zyyang90"]
+language = "zh-CN"
+title = "zyyang90's Rust Book"
+src = "src"
+
+[preprocessor.theme]
+pagetoc = true
+
+[output.html]
+additional-css = ["theme/pagetoc.css"]
+additional-js = ["theme/pagetoc.js"]

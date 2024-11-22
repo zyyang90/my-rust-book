@@ -1,0 +1,8 @@
+book/
+theme/
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
