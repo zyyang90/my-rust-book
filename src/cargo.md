@@ -24,3 +24,8 @@ git-fetch-with-cli = true
 ```
 
 参考：https://rsproxy.cn/
+
+# 报错
+```console
+attempted ssh-agent authentication, but no usernames succeeded: `git` if the git CLI succeeds then `net.git-fetch-with-cli` may help here https://doc.rust-lang.org/cargo/reference/config.html#netgit-fetch-with-cli Caused by: no authentication methods succeeded
+```

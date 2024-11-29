@@ -1,10 +1,19 @@
 # tokio_cron_scheduler
 
 ## 概念
-- tokio_cron_scheduler: 在异步 tokio 环境中使用类似 cron 的调度，支持任务立即执行，或者以一个固定的duration 重复执行，可以使用 PostgreSQL 或 Nats 保留任务数据。
+
+- tokio_cron_scheduler: 在异步 tokio 环境中使用类似 cron 的调度，支持任务立即执行，或者以一个固定的duration 重复执行，可以使用
+  PostgresSQL 或 Nats 保留任务数据。
 - Nats：一个开源、轻量级、高性能的分布式消息中间件，实现了高可伸缩性和优雅的 Publish / Subscribe 模型，使用 Golang 语言开发。
 
+### 任务的执行策略
+
+1. oneshot：执行一次，然后停止
+2. repeat: 重复执行，直到调用 stop
+3. cron：根据 cron 表达式执行
+
 ## example
+
 ```rust
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
@@ -23,12 +32,16 @@ async fn main() -> anyhow::Result<()> {
 ```
 
 ## JobScheduler
+
 初始化 JobScheduler，有 2 种方法：
+
 - pub async fn inited(&self) -> bool：返回 scheduler 是否完成了初始化
 - pub async fn init(&mut self) -> Result<(), JobSchedulerError>：初始化各种 actor
 
 ## Job
+
 ### 创建 Job
+
 ```rust
 // 默认的，创建 scheduler
 pub async fn new() -> Result<Self, JobSchedulerError>
