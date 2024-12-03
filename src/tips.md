@@ -45,6 +45,12 @@ repos:
 pre-commit install --hook-type commit-msg
 ```
 
+查看当前支持的 hook type：
+
+```console
+ll .git/hooks
+```
+
 2. 在 scripts 下，添加脚本
 
 ```bash
@@ -108,9 +114,12 @@ perf top -gp `pidof taosx`
 ```
 
 # 用 git subtree 将外部仓库添加到当前仓库
+
 1. 在 taosx 仓库中新建一个分支
+
 ```console
 git checkout -b enh/td-31475
 ```
+
 2. 将 
 

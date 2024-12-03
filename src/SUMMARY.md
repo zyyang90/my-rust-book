@@ -7,9 +7,10 @@
 - [泛型](rust_std/generic.md)
 - [类型的构建](rust_std/build_type.md)
 - [迭代器](rust_std/iterator.md)
-- [Box\<T\>](rust_std/Box\<T\>.md)
-- [Arc\<T\>](rust_std/Arc\<T\>.md)
+- [Box\<T\>](rust_std/box.md)
+- [Arc\<T\>](rust_std/arc.md)
 - [trait](rust_std/trait.md)
+- [错误处理](rust_std/handle_error.md)
 
 # Rust 异步
 
